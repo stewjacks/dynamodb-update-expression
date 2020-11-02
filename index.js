@@ -103,7 +103,7 @@ var removeSpecialChars = function (s) {
 };
 
 var removeSpecialCharsInExpression = function (s) {
-  return s.replace(/\.|:|#|-|\s*/g, "");
+  return s.replace(/\.|:|#|-|/g, "").replace(/\s*/g, "S").replace(/\//g, "s"); // replace other special characters with accepted characters to make out name properly without duplication
 };
 
 var updateExpressionGenerator = function (compareResult, options, path,
