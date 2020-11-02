@@ -99,11 +99,11 @@ var deepDiffMapper = function () {
 }();
 
 var removeSpecialChars = function (s) {
-  return s.replace(/\./g, "").replace(/:/g, "").replace(/#/g, "").replace(/\//g, "").replace(" ", "");
+  return s.replace(/\./g, "").replace(/:/g, "").replace(/#/g, "").replace(/\//g, "").replace(/\s*/g, "");
 };
 
 var removeSpecialCharsInExpression = function (s) {
-  return s.replace(/\.|:|#|-/g, "");
+  return s.replace(/\.|:|#|-|\s*/g, "");
 };
 
 var updateExpressionGenerator = function (compareResult, options, path,
